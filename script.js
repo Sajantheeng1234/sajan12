@@ -66,3 +66,33 @@ services.forEach(projects=> {
     `;
     containers.appendChild(card)
 });
+
+const reviews=[
+{
+  image: "ai.webp",
+  title:"Elon Musk",
+  description:"\"Great work very creative and professional\"",
+},
+{
+  image: "coding.jpg",
+  title:"Mark Zuckerberg",
+  description:"\"Love the design and animations.Highly recommended\"",
+},
+{
+  image: "ai.webp",
+  title:"Steve Jobs",
+  description:"\"Clean code and responsive layout. Impressive\"",
+},
+];
+const container2 = document.getElementById("review-container");
+reviews.forEach(review=>{
+  const card2= document.createElement("div");
+  card2.className="card-review";
+  card2.innerHTML=`
+  <img src="${review.image}" alt="${reviews.title}"/>
+  <h4>${review.title}</h4>
+  <p>${review.description}</p>
+  `;
+  container2.appendChild(card2);
+});
+
